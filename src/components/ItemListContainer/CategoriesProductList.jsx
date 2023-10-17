@@ -4,6 +4,8 @@ import products from '../../mocks/products.json';
 import { CircularProgress, Grid } from "@mui/material";
 import ProductDetail from "../products/ProductDetail";
 
+//CATEGORIES PRODUCT LIST: PARA INGRESAR A LAS CATEGORIAS E INGRESAR A LOS DETALLES DE LOS PRODUCTOS
+
 //etiqueta Grid de Mui prearmada. BOOTstrap y otras librerias hay que trabajar con grid
 //grilla de MUI establecida
 

@@ -1,11 +1,23 @@
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 import './CartWidget.css';
 
-
-
 const CartWidget = () => {
+    
+  const iconStyle = {
+    fontSize: '4vh',
+    color:'#AB0C0C'
+  };
 
-    return (<> <div className='divCart'><AddShoppingCartSharpIcon/> <span className='number'>0</span></div> </>);
+  return (
+
+    <div className='divCart'>
+
+      <AddShoppingCartSharpIcon style={iconStyle} />
+
+      <span className='number'>0</span>
+
+    </div>
+  );
 }
 
 export default CartWidget;
