@@ -1,6 +1,6 @@
 import { Modal, Typography } from "@mui/material";
 import PaymentIcon from '@mui/icons-material/Payment'
-import ItemCount from "../common/ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 const ProductInfo = ({ product, open, setOpen }) => {
 

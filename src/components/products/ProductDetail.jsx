@@ -1,6 +1,7 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import ProductInfo from "./ProductInfo";
 import { useState } from "react";
+import ItemCount from '../ItemCount/ItemCount';
 
 const ProductDetail = ({ product, children }) => {
 
