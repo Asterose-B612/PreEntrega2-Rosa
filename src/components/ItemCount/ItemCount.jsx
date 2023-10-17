@@ -1,8 +1,10 @@
 import { useState } from 'react';
+//import PropTypes from 'prop-types'; // Importa PropTypes para validar las props
 
+//creo un state de "conteo"
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial);
-
+//FUNCIONES DE INCREMENTO Y DECREMENTO → conteo < stock , sumo,y si es >mayor que mi n°inicial,pueda restar 
     const increment = () => {
         if (count < stock) {
             setCount(count + 1);
@@ -25,7 +27,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <div style={{ overflow: "hidden" }}>
             <button
                 onClick={decrement}
-                disabled={count === 0} // Cambiado de "count === initial" a "count === 0"
+                disabled={count<= initial} 
                 style={{ fontSize: "20px", marginRight: "10px", color: "black", borderColor: 'gray' }}>
                 -
             </button>
@@ -56,6 +58,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             </button>
         </div>
     );
-}
+};
 
+// Define la validación de tipo para las props
+
+
+{/* 
+    ItemCount.propTypes = {
+    stock: PropTypes.number.isRequired,
+    initial: PropTypes.number.isRequired,
+    onAdd: PropTypes.func.isRequired,
+  };
+*/}
 export default ItemCount;

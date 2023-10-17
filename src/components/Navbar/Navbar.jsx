@@ -1,11 +1,11 @@
 import { AppBar, Button, Toolbar, Typography } from '@mui/material';
-import './NavBar.css';
+import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 
-const NavBar = () => {
+const Navbar = () => {
 
     const estiloBoton = {
 
@@ -29,33 +29,40 @@ const NavBar = () => {
     <AppBar>
 
         <Toolbar sx={{backgroundColor:'lightgrey', display: 'flex', justifyContent: 'space-between'}}>
-          
+         
+          <link to="/">
             <Typography sx={{fontSize: '40px', fontWeight: 'bold' }}>
-                
-                Gerhard
-            
+             Gerhard
             </Typography>
+          </link>
+
+
 
             <nav>
                 <div>
-                   
-                     <Link to="/home"><Button className= 'button' sx={estiloBoton}>Home</Button></Link>
+                    <Link to="/home"><Button className= 'button' sx={estiloBoton}>Home</Button></Link>
+                    
+                     <Link to="/products">
+                        <Typography >Productos </Typography></Link>
 
                      <Link  to="/Nosotros"><Button sx={estiloBoton}>Nosotros</Button></Link>
 
                      <Link  to="/contacto"><Button sx={estiloBoton}>Contacto</Button></Link>
-
                 </div>
             </nav>
 
-          <CartWidget/>
+            <Link to="/cart">
+                    <CartWidget />
+                </Link>
 
         </Toolbar>
 
-    </AppBar>);
+    </AppBar>
+    
+    );
 }
 
-export default NavBar;
+export default Navbar;
 
 
 

@@ -2,7 +2,6 @@ import { CircularProgress, Grid, Typography } from "@mui/material";
 import useAsyncMock from "../../hooks/useAsyncMock";
 import products from '../../mocks/products.json';
 import ProductDetail from "./ProductDetail";
-import ProductInfo from "./ProductInfo";
 
 
 const ProductList = () => {
@@ -32,8 +31,9 @@ const ProductList = () => {
             }
         </Grid>
 
-
-    </div>);
+    </div>
+    
+    );
 }
 
 export default ProductList;
