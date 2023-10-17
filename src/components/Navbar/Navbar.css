@@ -1,4 +1,11 @@
 Button:hover {
-    color: rgb(238, 238, 170);
-  }
 
+  font-weight: bold; 
+
+  color: #ffffff; /* Cambio de color*/
+
+  transform: scale(1.1); /* Efecto de escala */
+
+  background-color: blue;
+ 
+}
