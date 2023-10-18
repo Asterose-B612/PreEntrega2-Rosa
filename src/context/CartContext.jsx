@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react';
 
 // Creo un contexto para el carrito de compras
 export const CartContext = createContext([]);
-
+//Lo exporto a Cart Widget
 export const useCartContext = ()=> useContext (CartContext);
 
 // Es el componente de proveedor del contexto
@@ -12,14 +12,18 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState({ items: [], total: 0 })
 //AA PRODUCTOS AL CARRITO es como un handle, quiero algo que me agarre el producto y me setee el producto en el carrito
   
+//para agregar producto
 const addToCart = (product) => {
 
-  setCart((prevCart) => ({...prevCart,
+   setCart((prevCart) => ({...prevCart,
 
      items:[prevCart.items, product],
      
-     total: prevCart.total + product.price }));
-};
+     total: prevCart.total + product.price *product.quantity
+     }))
+     
+   
+   }
 
 const removeFromCart = (productId) => {
   setCart((prevCart) => {
